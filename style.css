@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap");
+
+/* 
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ CSS STYLE GUIDE ////////*~*~*~*~*~*~*~*~*~*~*
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*
+------------- 01 TYPOGRAPHY SYSTEM
+- Font Sizes(px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- Font Weights:
+
+--- Line Heights:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph Default: 1.6
+Large: 1.8
+
+--- Letter Spacing:
+-0.5px
+0.75px
+
+------------- 02 COLORS
+
+------------- 03 SHADOWS
+ 
+------------- 04 BORDER RADIUS
+
+------------- 05 WHITESPACE
+
+- Spacing System(px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+---------vvvvvv--------- USING FLEX TO KEEP FOOTER AT BOTTOM ---------vvvvvv---------
+*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin-top: 3rem;
+  flex-grow: 1;
+}
+
+.mar-btm-xs {
+  margin-bottom: 1.2rem;
+}
+
+.mar-btm-sm {
+  margin-bottom: 2.4rem;
+}
+
+.mar-btm-md {
+  margin-bottom: 4.8rem;
+}
+
+.mar-btm-lg {
+  margin-bottom: 6.4rem;
+}
+
+.mar-btm-xl {
+  margin-bottom: 12.8rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ HEADER SECTION ////////*~*~*~*~*~*~*~*~*~*~*
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~
+*/
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #89c776;
+  padding: 1rem 4.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown */
+
+.dropdown {
+  font-size: 1.6rem;
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Down Arrow */
+.dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+/* Hides Check Button */
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+/*
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ INTRO SECTION ////////*~*~*~*~*~*~*~*~*~*~
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~
+*/
+
+.intro-section {
+  position: relative;
+}
+
+.help-button {
+  font-size: 3.2rem;
+  position: fixed;
+  top: 8rem;
+  left: 3rem;
+}
+
+.help-button:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 90rem;
+  font-size: 2rem;
+}
+
+.rules-container {
+  z-index: 3;
+  width: 45rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: -50%;
+  margin: auto;
+  padding: 3.2rem;
+}
+
+.close-help {
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  font-size: 3.2rem;
+  top: 1rem;
+  left: 1rem;
+  text-transform: lowercase;
+}
+
+.close-help:hover {
+  color: #89c776;
+}
+
+.type-matchups {
+  width: 100%;
+}
+
+/*
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ GAME SECTION ////////*~*~*~*~*~*~*~*~*~*~*
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~
+*/
+
+.player-scores {
+  gap: 2rem;
+}
+
+.pokemon-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-card p {
+  font-weight: 600;
+}
+
+.pokemon-image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.pokemon-image:hover {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 0.5, 0.5);
+  animation-iteration-count: infinite;
+}
+
+.player-pick {
+  font-size: 3.6rem;
+}
+
+.score-wrapper {
+  background-color: rgba(254, 254, 254, 0.6);
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+.score-card {
+  background-color: rgba(254, 254, 254, 0.6);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.score {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 30rem;
+  padding: 4rem;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -1.5rem, 0);
+  }
+}
+
+/*
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ GAME SECTION ////////*~*~*~*~*~*~*~*~*~*~*
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~
+*/
+
+.credit {
+  gap: 1.2rem;
+  align-items: center;
+}
+
+footer a {
+  color: #000;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* CSS */
+.btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn .text {
+  font-size: 2.2rem;
+}
+
+.btn-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.btn-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    rgb(6, 137, 32),
+    rgb(6, 169, 72),
+    rgb(6, 166, 64),
+    rgb(1, 75, 16)
+  );
+}
+
+.btn-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: rgb(6, 137, 32);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.btn:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.btn:hover .btn-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn:active .btn-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:hover .btn-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn-pushable:active .btn-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:focus:not(:focus-visible) {
+  outline: none;
+}

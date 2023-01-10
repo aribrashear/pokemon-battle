@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Starter Battle</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="flex">
+      <p class="logo-title">Pokémon Battle</p>
+      <nav class="nav">
+        <label class="dropdown">
+          <div class="dd-button">
+            Select Generation
+          </div>
+          <input type="checkbox" class="dd-input" id="test">
+          <ul class="dd-menu">
+            <li id="gen1" onclick="changeGenImage('gen1')">Gen 1 (Red/Blue)</li>
+            <li id="gen2" onclick="changeGenImage('gen2')">Gen 2 (Gold/Silver)</li>
+            <li id="gen3" onclick="changeGenImage('gen3')">Gen 3 (Ruby/Sapphire)</li>
+            <li id="gen4" onclick="changeGenImage('gen4')">Gen 4 (Diamond/Pearl)</li>
+            <li id="gen5" onclick="changeGenImage('gen5')">Gen 5 (Black/White)</li>
+          </ul>  
+        </label>
+      </nav>
+    </header>
+    <main>
+      <section class="intro-section">
+          <ion-icon class="help-button" id="helpButton" name="help-circle-outline" onclick="showMatchups()" ></ion-icon>
+        <div class="intro-container mar-btm-xs flex column center">
+          <h1 class="primary-header mar-btm-xs">Pokémon Starter Battle</h1>
+        </div>
+        <div class="rules-container flex center" id="rulesContainer">
+            <ion-icon name="close-circle-outline" class="close-help" id="closeHelp" onclick="hideMatchups()"></ion-icon>
+            <img src="/images/TypeMatchups.png" class="type-matchups" id="typeMatchups"  alt="Image showing the rules for the game." />
+        </div>
+        <div class="scoreboard mar-btm-md flex column center">
+          <p class="mar-btm-sm">
+            <span class="player-pick" id="player1Pick"></span>
+            <span class="player-pick"id="computerPick"></span>
+          </p>
+          <div class="score-wrapper flex column center">
+            <p class="explanation-text mar-btm-sm" id="roundWinner">
+              The first player to score 5 points wins!
+            </p>
+            <div class="player-scores flex">
+              <div class="score-card flex column center">
+                <p class="score-title">Player 1 Score:</p>
+                <p class="score" id="player1Score">0</p>
+              </div>
+              <div class="score-card flex column center">
+                <p class="score-title">Computer Score:</p>
+                <p class="score" id="computerScore">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="game-section  flex column center">
+        <div class="pokemon-pick mar-btm-md flex center">
+          <div class="pokemon-card" id="fire">
+            <img
+              src="/images/gen1/Charizard.png"
+              alt="Charizard Sprite"
+              class="pokemon-image mar-btm-xs"
+              id="firePokeImage"
+            />
+            <p id="firePokeName">Go, Charizard!</p>
+          </div>
+          <div class="pokemon-card" id="grass">
+            <img
+              src="/images/gen1/Venusaur.png"
+              alt="Venusaur Sprite"
+              class="pokemon-image mar-btm-xs"
+              id="grassPokeImage"
+            />
+            <p id="grassPokeName">Go, Venusaur!</p>
+          </div>
+          <div class="pokemon-card" id="water">
+            <img
+              src="/images/gen1/Blastoise.png"
+              alt="Blastoise Sprite"
+              class="pokemon-image mar-btm-xs"
+              id="waterPokeImage"
+            />
+            <p id="waterPokeName">Go, Blastoise!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="overlay" id="overlay"></div>
+      <div class="credit flex">
+        <div>
+
+          &copy; <a href="http://aribrashear.com" target="_blank">Ari Brashear</a>
+          <script>
+            document.write(new Date().getFullYear())
+            </script>
+      </div>
+        <a href="https://www.linkedin.com/in/ari-brashear/" target="_blank"><ion-icon name="logo-linkedin" class="flex center"></ion-icon></a>
+      </div>
+        <div class="modal" id="endGameModal">
+        <p class="modal-text mar-btm-sm" id="endGameMessage"></p>
+        <a class="btn btn-restart" role="button" id="tryAgain">
+          <span class="btn-shadow"></span>
+          <span class="btn-edge"></span>
+          <span class="btn-front text">
+            Start Over?
+          </span>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
