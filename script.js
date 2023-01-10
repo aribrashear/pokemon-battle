@@ -164,8 +164,7 @@ const resetGame = () => {
   computerScore.textContent = 0
   player1Pick.textContent = ""
   computerPick.textContent = ""
-  roundWinner.textContent =
-    "When you're ready, pick your move from the options below!"
+  roundWinner.textContent = "The first player to score 5 points wins!"
   closeEndGameModal()
 }
 
