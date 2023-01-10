@@ -12,6 +12,10 @@ let computerWins = 0
 let roundWinnerMessage = ""
 let currentPlayer = ""
 
+let chosenFirePokemon = "Charizard"
+let chosenGrassPokemon = "Venusaur"
+let chosenWaterPokemon = "Blastoise"
+
 const playRound = (player1Selection, computerSelection) => {
   // Main game logic for each round.
   if (player1Selection === computerSelection) {
@@ -82,23 +86,23 @@ tryAgain.addEventListener("click", () => resetGame())
 const updateChoices = (player1Selection, computerSelection) => {
   switch (player1Selection) {
     case "fire":
-      player1Pick.textContent = "Player 1's Charizard vs."
+      player1Pick.textContent = `Player 1's ${chosenFirePokemon} vs.`
       break
     case "grass":
-      player1Pick.textContent = "Player 1's Venusaur vs."
+      player1Pick.textContent = `Player 1's ${chosenGrassPokemon} vs.`
       break
     case "water":
-      player1Pick.textContent = "Player 1's Blastoise vs."
+      player1Pick.textContent = `Player 1's ${chosenWaterPokemon} vs.`
   }
   switch (computerSelection) {
     case "fire":
-      computerPick.textContent = "Computer's Charizard!"
+      computerPick.textContent = `Computer's ${chosenFirePokemon}!`
       break
     case "grass":
-      computerPick.textContent = "Computer's Venusaur!"
+      computerPick.textContent = `Computer's ${chosenGrassPokemon}!`
       break
     case "water":
-      computerPick.textContent = "Computer's Blastoise!"
+      computerPick.textContent = `Computer's ${chosenWaterPokemon}!`
   }
 }
 
@@ -177,6 +181,9 @@ const changeGenImage = (gen) => {
       firePokeName.textContent = "Go, Charizard!"
       grassPokeName.textContent = "Go, Venusaur!"
       waterPokeName.textContent = "Go, Blastoise!"
+      chosenFirePokemon = "Charizard"
+      chosenGrassPokemon = "Venusaur"
+      chosenWaterPokemon = "Blastoise"
       break
     case "gen2":
       firePokeImage.src = "./images/gen2/Typhlosion.png"
@@ -185,6 +192,9 @@ const changeGenImage = (gen) => {
       firePokeName.textContent = "Go, Typhlosion!"
       grassPokeName.textContent = "Go, Meganium!"
       waterPokeName.textContent = "Go, Feraligatr!"
+      chosenFirePokemon = "Typhlosion"
+      chosenGrassPokemon = "Meganium"
+      chosenWaterPokemon = "Feraligatr"
       break
     case "gen3":
       firePokeImage.src = "./images/gen3/Blaziken.png"
@@ -193,6 +203,9 @@ const changeGenImage = (gen) => {
       firePokeName.textContent = "Go, Blaziken!"
       grassPokeName.textContent = "Go, Sceptile!"
       waterPokeName.textContent = "Go, Swampert!"
+      chosenFirePokemon = "Blaziken"
+      chosenGrassPokemon = "Sceptile"
+      chosenWaterPokemon = "Swampert"
       break
     case "gen4":
       firePokeImage.src = "./images/gen4/Infernape.png"
@@ -201,6 +214,9 @@ const changeGenImage = (gen) => {
       firePokeName.textContent = "Go, Infernape!"
       grassPokeName.textContent = "Go, Torterra!"
       waterPokeName.textContent = "Go, Empoleon!"
+      chosenFirePokemon = "Infernape"
+      chosenGrassPokemon = "Torterra"
+      chosenWaterPokemon = "Empoleon"
       break
     case "gen5":
       firePokeImage.src = "./images/gen5/Emboar.png"
@@ -209,6 +225,9 @@ const changeGenImage = (gen) => {
       firePokeName.textContent = "Go, Emboar!"
       grassPokeName.textContent = "Go, Serperior!"
       waterPokeName.textContent = "Go, Samurott!"
+      chosenFirePokemon = "Emboar"
+      chosenGrassPokemon = "Serperior"
+      chosenWaterPokemon = "Samurott"
       break
   }
 }
