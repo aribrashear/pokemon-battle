@@ -505,11 +505,15 @@ footer a:hover {
   }
 
   .help-button {
-    top: 8rem;
-    left: 1rem;
+    top: 9rem;
+    left: 3rem;
   }
 
   .pokemon-card p {
     font-size: 1.8rem;
+  }
+
+  .primary-header {
+    margin-top: 10rem;
   }
 }
