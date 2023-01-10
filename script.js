@@ -172,41 +172,41 @@ const resetGame = () => {
 const changeGenImage = (gen) => {
   switch (gen) {
     case "gen1":
-      firePokeImage.src = "/images/gen1/Charizard.png"
-      grassPokeImage.src = "/images/gen1/Venusaur.png"
-      waterPokeImage.src = "/images/gen1/Blastoise.png"
+      firePokeImage.src = "./images/gen1/Charizard.png"
+      grassPokeImage.src = "./images/gen1/Venusaur.png"
+      waterPokeImage.src = "./images/gen1/Blastoise.png"
       firePokeName.textContent = "Go, Charizard!"
       grassPokeName.textContent = "Go, Venusaur!"
       waterPokeName.textContent = "Go, Blastoise!"
       break
     case "gen2":
-      firePokeImage.src = "/images/gen2/Typhlosion.png"
-      grassPokeImage.src = "/images/gen2/Meganium.png"
-      waterPokeImage.src = "/images/gen2/Feraligatr.png"
+      firePokeImage.src = "./images/gen2/Typhlosion.png"
+      grassPokeImage.src = "./images/gen2/Meganium.png"
+      waterPokeImage.src = "./images/gen2/Feraligatr.png"
       firePokeName.textContent = "Go, Typhlosion!"
       grassPokeName.textContent = "Go, Meganium!"
       waterPokeName.textContent = "Go, Feraligatr!"
       break
     case "gen3":
-      firePokeImage.src = "/images/gen3/Blaziken.png"
-      grassPokeImage.src = "/images/gen3/Sceptile.png"
-      waterPokeImage.src = "/images/gen3/Swampert.png"
+      firePokeImage.src = "./images/gen3/Blaziken.png"
+      grassPokeImage.src = "./images/gen3/Sceptile.png"
+      waterPokeImage.src = "./images/gen3/Swampert.png"
       firePokeName.textContent = "Go, Blaziken!"
       grassPokeName.textContent = "Go, Sceptile!"
       waterPokeName.textContent = "Go, Swampert!"
       break
     case "gen4":
-      firePokeImage.src = "/images/gen4/Infernape.png"
-      grassPokeImage.src = "/images/gen4/Torterra.png"
-      waterPokeImage.src = "/images/gen4/Empoleon.png"
+      firePokeImage.src = "./images/gen4/Infernape.png"
+      grassPokeImage.src = "./images/gen4/Torterra.png"
+      waterPokeImage.src = "./images/gen4/Empoleon.png"
       firePokeName.textContent = "Go, Infernape!"
       grassPokeName.textContent = "Go, Torterra!"
       waterPokeName.textContent = "Go, Empoleon!"
       break
     case "gen5":
-      firePokeImage.src = "/images/gen5/Emboar.png"
-      grassPokeImage.src = "/images/gen5/Serperior.png"
-      waterPokeImage.src = "/images/gen5/Samurott.png"
+      firePokeImage.src = "./images/gen5/Emboar.png"
+      grassPokeImage.src = "./images/gen5/Serperior.png"
+      waterPokeImage.src = "./images/gen5/Samurott.png"
       firePokeName.textContent = "Go, Emboar!"
       grassPokeName.textContent = "Go, Serperior!"
       waterPokeName.textContent = "Go, Samurott!"
