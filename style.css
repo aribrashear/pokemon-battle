@@ -476,3 +476,40 @@ footer a:hover {
 .btn-pushable:focus:not(:focus-visible) {
   outline: none;
 }
+
+/*
+*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*
+*~*~*~*~*~*~*~*~*~*~*\\\\\\\\ MEDIA QUERIES ////////*~*~*~*~*~*~*~*~*~*~
+~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~**~*~*~*~*~
+*/
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+
+  .pokemon-image {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 35em) {
+  html {
+    font-size: 40%;
+  }
+
+  .pokemon-image {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .help-button {
+    top: 8rem;
+    left: 1rem;
+  }
+
+  .pokemon-card p {
+    font-size: 1.8rem;
+  }
+}
